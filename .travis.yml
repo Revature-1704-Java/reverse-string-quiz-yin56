@@ -1,3 +1,9 @@
 language: java
 sudo: false
-script: mvn clean verify
+addons:
+  sonarcloud:
+    organization: 1712java
+    token:
+      secure: Ez38Qp2O0lZWazdaK8izUwC6P5LViK/3g8hwd/WLsUbbTE4xOF5sN+uWdd6/hr9iRl6ZXDEoTMx+0LW61i8kiG8qTx/cKBhGFAotxuLsAJ2ycIf0R0bjF6zZUgeYh6lH/V3rVDKvoUe4pXLOqH98uVe1aJ8Y8epyC7DTK7cYikd8AQgjCdqWqEIb1pkU6slHo86i0Lua4uoFCYzyM383d99/Uocqz7F+k3dwJ2dDh5XNjn/drSXOMIQ4WSCjkoKo/o3tiIRjvx/gRiO4sP4nH1LBvaSQL36+fD8zm9EpynD29+UYycPfCTROWTVZ7+11ULyM0InoYuvsX+XQC6A+3nZTRoL77DqOkW7+OtgXtr2iOzuM+Ek9CE0C+LX1cbWLqiQmff5OUkSFWuN4vBMGxBgqzXmGVExzTiX8Xank0l1wtCBrj/Hu6TZvrL6cBNgERdy3LszBArSv//e7ACX8qSTTNUBrvdHVty49q5EcatY1kXiJXjM+xYS68184YIZyCQhIU5OyIhClGAxQ6iVVyPybC1gJZKMwhVTQ0VP+K0ub/JyPyTnWnxLJKiDHTJ3sgvMO4fr8jWW9LYWBd0K9dJFNKI9z7lJ1V0PVMHCZpXw0CUjPbZODzHczoQ/cyzL2zAs+civS3cSXAIlxlML2QoMQk02SN0MstRHU80z2pdo=
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
