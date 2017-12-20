@@ -3,7 +3,7 @@
 Return a reversed String input. Do not use StringBuffer or StringBuilder reverse() method.
 
 
-Examples: 
+Examples:
 
 input: "cool" output: "looc"
 
