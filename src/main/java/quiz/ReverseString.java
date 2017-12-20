@@ -11,7 +11,7 @@ public class ReverseString {
         for(int i = strlen; i > 0; i--){
             rev = rev.append(input.charAt(i-1));
         }
-        System.out.println(rev);
+        //System.out.println(rev);
         return rev.toString();
         //return new StringBuffer(input).reverse().toString();
     }
